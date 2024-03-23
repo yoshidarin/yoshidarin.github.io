@@ -1,0 +1,1 @@
+# yoshidarin.github.io
