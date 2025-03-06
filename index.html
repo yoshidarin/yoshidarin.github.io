@@ -9,9 +9,25 @@
     <meta name="icon" content="img/favion.ico">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
   </head>
 
   <body>
+    <div class="loading_bg">
+      <div class="loader"></div>
+      <div class="loading_text">
+        <span>l</span>
+        <span>o</span>
+        <span>a</span>
+        <span>d</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+      </div>
+    </div>
     <header id="header" class="wrapper">
       <h1 class="site-title"><a href="index.html"><img src="img/logo.svg" alt="Profile"></a></h1>
       <nav>
@@ -47,16 +63,20 @@
         <h2 class="section-title">Works</h2>
         <ul>
           <li>
-            <a href="https://github.com/yoshidarin/OmikujiApp">
-              <img src="img/ic_launcher-playstore.png" alt="テキストテキストテキスト">
-            </a>
+            <div class="app-img-container">
+              <a href="omikuji.html">
+                <img src="img/ic_launcher-playstore.png" alt="開運おみくじ画像" class="app-img">
+              </a>
+            </div>
             <h3 class="content-title">開運おみくじ</h3>
             <p>おみくじアプリ</p>
           </li>
           <li>
-            <a href="https://github.com/yoshidarin/tsukurepo/tree/develop">
-              <img src="img/ic_tsukurepo.png" alt="テキストテキストテキスト">
-            </a>  
+            <div class="app-img-container">
+              <a href="https://github.com/yoshidarin/tsukurepo/tree/develop">
+                <img src="img/ic_tsukurepo.png" alt="つくレポ画像" class="app-img">
+              </a>
+            </div>  
             <h3 class="content-title">つくレポ</h3>
             <p>勤怠アプリ</p>
           </li>
