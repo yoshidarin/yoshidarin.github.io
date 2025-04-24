@@ -1,0 +1,295 @@
+html {
+    font-size: 100%;
+}
+body {
+    color: #383e45;
+    font-size: 0.9rem;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+li {
+    list-style: none;
+}
+
+
+
+
+::after
+.site-title {
+    width: 120px;
+    line-height: 1px;
+    padding: 10px 0;
+}
+.site-title a {
+    display: block;
+}
+.site-title a img {
+    width: 120px;
+}
+
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto 100px auto;
+    padding: 0 4%;
+    text-align: center;
+}
+
+
+.section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section .content {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section .content img {
+    height: 100px;
+    object-fit: contain;
+}
+
+.title {
+    max-width: 960px;
+    margin: 0 auto 100px auto;
+    padding: 0 4%;
+    text-align: center;
+}
+
+
+/* セクションのタイトル */
+
+.app_title {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(58, 153, 174, 0.649);
+}
+
+.app_title h1{
+    font-size: 40px;
+}
+.section h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* セクションの画像 */
+.section img {
+
+}
+
+/* セクションの文章 */
+.section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/*
+ローディング
+*/
+.loading_bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+    background-color: white;
+    transition: all 0.5s linear;
+}
+
+.loading_bg.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*ローディングアイコン HTML: <div class="loader"></div> */
+.loader {    
+    --r1: 154%;
+    --r2: 68.5%;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%; 
+    background:
+      radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
+      radial-gradient(var(--r1) var(--r2) at bottom,#269af2 79.5%,#0000 80%),
+      radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
+      #ccc;
+    background-size: 50.5% 220%;
+    background-position: -100% 0%,0% 0%,100% 0%;
+    background-repeat:no-repeat;
+    animation: l9 2s infinite linear;
+  }
+  @keyframes l9 {
+      33%  {background-position:    0% 33% ,100% 33% ,200% 33% }
+      66%  {background-position: -100%  66%,0%   66% ,100% 66% }
+      100% {background-position:    0% 100%,100% 100%,200% 100%}
+  }
+/* ここまで　*/  
+
+/* HTML: <div class="loading_text"></div> */
+.loading_text {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+}
+
+.loading_text span {
+    display: inline-block;
+    color: #000;
+    font-size: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kaku Gothic ProN', メイリオ, Meiryo, sans-serif;
+    font-weight: bold;
+    animation: textShadow 2s infinite linear;
+    text-transform: uppercase;
+}
+
+.loading_text span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.loading_text span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading_text span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.loading_text span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.loading_text span:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.loading_text span:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.loading_text span:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.loading_text span:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.loading_text span:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+.loading_text span:nth-child(10) {
+    animation-delay: 1s;
+}
+
+@keyframes textShadow {
+    60% {
+        text-shadow: 0px 20px 0px #999;
+    }
+
+}
+
+/*github ボタン*/
+.button a {
+    background: #eee;
+    border-radius: 9999px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 250px;
+    padding: 10px 25px;
+    font-family: "Noto Sans Japanese";
+    color: #333333;
+    line-height: 1.8;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+.button a:hover {
+    background: #333333;
+    color: #FFF;
+}
+.button a:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.button a:hover:after {
+    border-color: #FFF;
+}
+body{
+    vertical-align:middle; 
+    padding: 50px 0;
+    text-align: center;
+}
+ 
+/*----------------------------------
+ヘッダー
+----------------------------------*/
+
+#header {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#header ul {
+    display: flex;
+    padding: 10px 0;
+}
+#header li {
+    margin-left: 30px;
+}
+#header li a {
+    color: #24292e;
+}
+#header li a:hover {
+    opacity: 0.7;
+}
+
+/*----------------------------------
+footer
+----------------------------------*/
+#footer {
+    font-size: 0.5rem;
+    padding: 10px 0;
+    text-align: center;
+}
