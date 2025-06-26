@@ -1,105 +1,77 @@
 html {
     font-size: 100%;
-}
-body {
+  }
+  body {
     color: #383e45;
     font-size: 0.9rem;
-}
-a {
+    background-color: #f4f4f4;
+    vertical-align: middle;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  a {
     text-decoration: none;
-}
-img {
-    max-width: 100%;
-}
-li {
+  }
+  
+  img {
+    max-width: 70%;
+    height: auto;
+  }
+  
+  li {
     list-style: none;
-}
-
-
-
-
-::after
-.site-title {
+  }
+  
+  /* サイトタイトル */
+  .site-title {
     width: 120px;
-    line-height: 1px;
     padding: 10px 0;
-}
-.site-title a {
+  }
+  .site-title a {
     display: block;
-}
-.site-title a img {
+  }
+  .site-title a img {
     width: 120px;
-}
-
-
-.wrapper {
+  }
+  
+  /* レイアウト全体 */
+  .wrapper {
     max-width: 960px;
-    margin: 0 auto 100px auto;
+    margin: 0 auto 100px;
     padding: 0 4%;
     text-align: center;
-}
-
-
-.section {
+  }
+  
+  /* セクション */
+  .section, .app_title {
     background-color: white;
     padding: 20px;
-    margin: 20px auto;
+    margin: 20px;
     max-width: 900px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-section .content {
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.section .content img {
-    height: 100px;
-    object-fit: contain;
-}
-
-.title {
-    max-width: 960px;
-    margin: 0 auto 100px auto;
-    padding: 0 4%;
-    text-align: center;
-}
-
-
-/* セクションのタイトル */
-
-.app_title {
-    background-color: white;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 900px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(58, 153, 174, 0.649);
-}
-
-.app_title h1{
+  }
+  
+  .app_title h1 {
     font-size: 40px;
-}
-.section h2 {
+  }
+  
+  .section h2 {
     font-size: 22px;
     color: #333;
     margin-bottom: 10px;
-}
-
-/* セクションの画像 */
-.section img {
-
-}
-
-/* セクションの文章 */
-.section p {
+  }
+  
+  .section p {
     font-size: 16px;
     color: #555;
     line-height: 1.6;
-}
+  }
+
+  .section-block {
+    margin-bottom: 30px;
+  }
 
 /*
 ローディング
@@ -117,7 +89,7 @@ section .content {
     height: 100dvh;
     overflow: hidden;
     background-color: white;
-    transition: all 0.5s linear;
+    transition: all 0.3s linear;
 }
 
 .loading_bg.loaded {
@@ -140,7 +112,7 @@ section .content {
     background-size: 50.5% 220%;
     background-position: -100% 0%,0% 0%,100% 0%;
     background-repeat:no-repeat;
-    animation: l9 2s infinite linear;
+    animation: l9 1.5s infinite linear;
   }
   @keyframes l9 {
       33%  {background-position:    0% 33% ,100% 33% ,200% 33% }
@@ -214,49 +186,8 @@ section .content {
 
 }
 
-/*github ボタン*/
-.button a {
-    background: #eee;
-    border-radius: 9999px;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 250px;
-    padding: 10px 25px;
-    font-family: "Noto Sans Japanese";
-    color: #333333;
-    line-height: 1.8;
-    text-decoration: none;
-    transition: 0.3s ease-in-out;
-    font-weight: 500;
-}
-.button a:hover {
-    background: #333333;
-    color: #FFF;
-}
-.button a:after {
-    content: '';
-    width: 5px;
-    height: 5px;
-    border-top: 3px solid #333333;
-    border-right: 3px solid #333333;
-    transform: rotate(45deg) translateY(-50%);
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    border-radius: 1px;
-    transition: 0.3s ease-in-out;
-}
-.button a:hover:after {
-    border-color: #FFF;
-}
-body{
-    vertical-align:middle; 
-    padding: 50px 0;
-    text-align: center;
-}
+
+
  
 /*----------------------------------
 ヘッダー
@@ -293,3 +224,57 @@ footer
     padding: 10px 0;
     text-align: center;
 }
+
+/*----------------------------------
+レスポンシブ対応
+----------------------------------*/
+
+@media (max-width: 700px) {
+    .wrapper,
+    .section,
+    .app_title {
+      padding: 10px;
+      margin: 10px;
+    }
+  
+    .site-title,
+    .site-title a img {
+      width: 100px;
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    #header {
+      flex-direction: column;
+      height: auto;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    #header ul {
+      flex-direction: column;
+      gap: 5px;
+      padding: 0;
+    }
+  
+    .button a {
+      font-size: 0.8rem;
+      max-width: 90%;
+      padding: 8px 16px;
+    }
+  
+    .app_title h1 {
+      font-size: 28px;
+    }
+  
+    .section h2 {
+      font-size: 18px;
+    }
+  
+    .section p {
+      font-size: 14px;
+    }
+  }

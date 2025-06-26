@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ShuuhouMaker</title>
+    <meta name="description" content="SpringBootTodo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/ic_rabbit.png">
+    <link rel="stylesheet" href="css/apps.css">
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="loading_bg">
+      <div class="loader"></div>
+      <div class="loading_text">
+        <span>l</span>
+        <span>o</span>
+        <span>a</span>
+        <span>d</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+    </div>
+    </div>
+    <header id="header" class="wrapper">
+      <h1 class="site-title"><a href="index.html"><img src="img/logo.svg" alt="Profile"></a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#works">Works</a></li>
+        </ul>
+      </nav>  
+    </header>
+    <main>
+        <section class="app_title">
+            <h1>週報メーカー</h1>
+            <p>Swingを用いた週報メール作成のための入力とメールの文章出力ができるアプリケーション</p>
+        </section>
+        <section class="section" style="text-align: left">
+          <h2>アプリについて</h2>
+          <p>言語：Java</p>
+          <p>開発環境：INtelliJ IDEA CE</p>
+          <p>フレームワーク：Swing</p>
+          <p>制作期間：5週間(リファクタリング2週間含む)</p>
+          <a href="https://github.com/yoshidarin/ShuuhouMaker" rel="Githubリンク">Githubリンク</a>
+
+        </section>
+        <section class="section" style="text-align: left">
+            <h2>機能</h2>
+            <h3>入力画面</h3>
+            <p>今週の業務の時間と業務内容を入力する画面</p>
+            <div class ="section-block">
+              <p>デフォルトはこの状態です</p>
+              <img src="img/shuuhou_main.png" alt="入力画面デフォルト状態">
+            </div>
+            <div class ="section-block">
+              <p>退勤時間や休日や有給休暇かどうかはプルダウンで選択できます</p>
+              <img src="img/shuuhou_input1.png" alt="入力画面1">
+            </div>
+            <div class ="section-block">
+              <p>業務内容はチェックボックスを選択する形式です</p>
+              <img src="img/shuuhou_input2.png" alt="入力画面2">
+            </div>
+            <h3>週報メール出力画面</h3>
+            <p>テンプレートから入力して得た情報を元にメールの文章を出力します</p>
+            <img src="img/shuuhou_result.png" alt="出力画面">
+            
+        </section>
+
+        <section class="section" style="text-align: left">
+          <h2>制作の経緯</h2>
+          <h3>- 制作理由 -</h3>
+          <p>週報のメール作成の効率と正確さについての問題をアプリで解決する方法を模索する中で、</p>
+          <p>JavaのフレームワークSwingを知り、Javaで画面構成に挑戦したかったため。</p>
+          <h3>- 制作の流れ -</h3>
+          <p>まず30時間ほどで必要な情報の入力と結果出力の機能があるアプリを作成</p>
+          <p>その後MVCモデルでのクラス構成やテンプレートの用意などのリファクタリングを行いました。</p>
+          <h3>- 工夫した点 -</h3>
+            <p>入力時の手間を減らす工夫：土日の休日設定・時間選択は15分刻みのコンボボックスを用意</p>
+            <p>保守性の高い設計の工夫：MVCモデルでの実装・テンプレートをtextファイルで用意</p>
+        </section>
+
+        <section class="section" style="text-align: left">
+            <h2>感想</h2>
+            <p>JavaでGUIアプリを作れる手応えを得られました。</p>
+            <p>リファクタリングを通してMVCやテンプレート活用を学び保守性を高めることができ、満足のいく開発になりました。</p>
+            <p>今後はタブ切り替えにより先週分の週報を作れる機能を追加したいです。</p>
+        </section>
+
+
+    </main>
+  </body>
+</html>

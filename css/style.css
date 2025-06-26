@@ -57,7 +57,7 @@ li {
     background-size: 50.5% 220%;
     background-position: -100% 0%,0% 0%,100% 0%;
     background-repeat:no-repeat;
-    animation: l9 2s infinite linear;
+    animation: l9 1.5s infinite linear;
   }
   @keyframes l9 {
       33%  {background-position:    0% 33% ,100% 33% ,200% 33% }
@@ -207,9 +207,10 @@ mainvisual
 #mainvisual img {
     width: 100%;
     max-width: 1920px;
-    height: 600px;
+    height: 400px;
     object-fit: cover;
 }
+
 
 /*----------------------------------
 About
