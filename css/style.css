@@ -1,287 +1,144 @@
-@charset "UTF-8";
-
-html {
-    font-size: 100%;
-}
 body {
-    color: #383e45;
-    font-size: 0.9rem;
-}
-a {
-    text-decoration: none;
-}
-img {
-    max-width: 100%;
-}
-li {
-    list-style: none;
-}
-
-
-/*
-ローディング
-*/
-.loading_bg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 100dvw;
-    height: 100dvh;
-    overflow: hidden;
-    background-color: white;
-    transition: all 0.5s linear;
-}
-
-.loading_bg.loaded {
-    opacity: 0;
-    visibility: hidden;
-}
-
-/*ローディングアイコン HTML: <div class="loader"></div> */
-.loader {    
-    --r1: 154%;
-    --r2: 68.5%;
-    width: 60px;
-    aspect-ratio: 1;
-    border-radius: 50%; 
-    background:
-      radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
-      radial-gradient(var(--r1) var(--r2) at bottom,#269af2 79.5%,#0000 80%),
-      radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
-      #ccc;
-    background-size: 50.5% 220%;
-    background-position: -100% 0%,0% 0%,100% 0%;
-    background-repeat:no-repeat;
-    animation: l9 1.5s infinite linear;
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(rgb(41, 140, 134),rgb(247, 255, 255), rgba(254, 245, 245, 0.907)); 
   }
-  @keyframes l9 {
-      33%  {background-position:    0% 33% ,100% 33% ,200% 33% }
-      66%  {background-position: -100%  66%,0%   66% ,100% 66% }
-      100% {background-position:    0% 100%,100% 100%,200% 100%}
-  }
-/* ここまで　*/
 
-/* HTML: <div class="loading_text"></div> */
-.loading_text {
-    margin-top: 2%;
-    display: flex;
-    justify-content: center;
-    gap: 3px;
-}
-
-.loading_text span {
-    display: inline-block;
-    color: #000;
-    font-size: 2rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kaku Gothic ProN', メイリオ, Meiryo, sans-serif;
-    font-weight: bold;
-    animation: textShadow 2s infinite linear;
-    text-transform: uppercase;
-}
-
-.loading_text span:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.loading_text span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.loading_text span:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.loading_text span:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.loading_text span:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-.loading_text span:nth-child(6) {
-    animation-delay: 0.6s;
-}
-
-.loading_text span:nth-child(7) {
-    animation-delay: 0.7s;
-}
-
-.loading_text span:nth-child(8) {
-    animation-delay: 0.8s;
-}
-
-.loading_text span:nth-child(9) {
-    animation-delay: 0.9s;
-}
-
-.loading_text span:nth-child(10) {
-    animation-delay: 1s;
-}
-
-@keyframes textShadow {
-    60% {
-        text-shadow: 0px 20px 0px #999;
-    }
-
-}
-
-/* ここまで　*/
-
-
-
-::after
-.site-title {
-    width: 120px;
-    line-height: 1px;
-    padding: 10px 0;
-}
-.site-title a {
-    display: block;
-}
-.site-title a img {
-    width: 120px;
-}
-
-.section-title {
-    display: inline-block;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 60px;
-    border-bottom: solid 1px #383e45;
-}
-
-
-.content-title {
-    font-size: 1rem;
-    margin: 10px 0;
-}
-.wrapper {
+    /* レイアウト全体 */
+  .wrapper {
     max-width: 960px;
-    margin: 0 auto 100px auto;
+    margin: 0 auto 100px;
     padding: 0 4%;
     text-align: center;
-}
+  }
+  
 
-
-
-
-/*----------------------------------
-ヘッダー
-----------------------------------*/
-
-#header {
+  #header {
     display: flex;
-    height: 50px;
-    justify-content: space-between;
     align-items: center;
-    margin: 0 auto; 
+    justify-content:space-between;
+    padding: 10px 20px;
+    margin-right: 10%;
+    color: #c4fff9;
+  }
+
+  nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-#header ul {
-    display: flex;
-    padding: 10px 0;
-}
-#header li {
-    margin-left: 30px;
-}
-#header li a {
+  a {
+    text-decoration: none;
     color: #24292e;
-}
-#header li a:hover {
-    opacity: 0.7;
-}
+  }
 
-
-/*----------------------------------
-mainvisual
-----------------------------------*/
-#mainvisual {
-    margin-bottom: 80px;
-}
-#mainvisual img {
-    width: 100%;
-    max-width: 1920px;
-    height: 400px;
-    object-fit: cover;
-}
-
-
-/*----------------------------------
-About
-----------------------------------*/
-
-#about .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#about img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 30px;
-}
-#about .text {
-    text-align: left;
-}
-
-/*----------------------------------
-Works
-----------------------------------*/
-#works ul {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px; /* 要素間の間隔を調整 */
-    flex-wrap: wrap; /* スマホ表示時に折り返しができるように */
-}
-#works li {
-    width: 32%;
-    margin-bottom: 20px;
-}
-/* 画像を正方形にするためのスタイル */
-.app-img-container {
-    position: relative;
-    width: 90%;
-    padding-top: 90%; /* アスペクト比を1:1（正方形）に保つ */
-    overflow: hidden; /* ホバーでズームした画像がはみ出ない */
-    margin-bottom: 10px;
-}
-.app-img-container a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  
+  
+    /* サイトタイトル */
+  .site-title {
+    width: 120px;
+    padding: 10px 0;
+  }
+  .site-title a {
     display: block;
+    color: #c4fff9;
 
-}
-.app-img {
-    transition: filter 0.3s ease; /* ホバーエフェクトのスムーズさ */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 画像のアスペクト比を保ちつつ、コンテナを埋める */
-}
-.content-title {
-    margin: 8px 0;
-    font-size: 18px;
-}
+  }
+  .site-title a img {
+    width: 120px;
+  }
+  
+  .hero {
+    background-image: url('../img/rabbit.jpg');
+    background-size: cover; /* セクション全体を覆うように画像を拡大・縮小 */
+    background-position: center; /* 画像を中央に配置 */
+    background-repeat: no-repeat; /* 画像を繰り返さない */
+    /* その他のスタイル（例: 高さ、パディング、文字色など） */
+    height: 300px; /* 必要に応じて高さを調整 */
+    display: flex; /* hero-content を中央に配置するために使用 */
+    justify-content: center; /* hero-content を水平方向の中央に配置 */
+    align-items: center; /* hero-content を垂直方向の中央に配置 */
+    color: #fff; /* 文字色を白に設定（背景画像によっては見えにくい場合があるため） */
+    text-align: center; /* テキストを中央揃えに */
+  }
+  .hero-content {
+    /* color: #ddc4ff; */
+  }
 
-/* アプリ画像ホバー*/
-.app-img-container:hover .app-img {
-    transform: scale(1.1); /* 1.1倍にズーム */
 
-}
-/*オーバーレイ効果*/
-.overlay {
+
+ 
+  section {
+    padding: 60px 20px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .about {
+    display: flex;
+    align-items: flex-start;
+    gap: 10%;
+    padding: 40px 20px;
+  }
+  
+  .profile-img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .profile-text {
+    max-width: 600px;
+  }
+  
+  .profile-text h3 {
+    margin-top: 0;
+  }
+  
+  .profile-text h4 {
+    margin-bottom: 5px;
+    margin-top: 20px;
+  }
+  
+  .profile-text ul {
+    padding-left: 20px;
+  }
+
+
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+  }
+
+  .works {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .work-item {
+    flex: 1 1 250px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fafafa;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .work-item:hover {
+    transform: scale(1.05); /* 1.05倍にズーム */
+  }
+
+  .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -289,63 +146,46 @@ Works
     height: 100%;
     background-color: rgba(255, 255, 255, 0);
     transition: background-color 0.3s ease;
+    /* 下の要素のクリックは有効にするため*/
+    pointer-events: none;
 }
 
-.app-img-container:hover .overlay {
-    background-color: rgba(255, 255, 255, 0.2);
+.work-item:hover .overlay {
+    background-color: rgba(240, 208, 246, 0.5);
 }
 
+  .work-item h3 {
+    margin-top: 0;
+  }
 
-/* レスポンシブ対応 */
-@media screen and (max-width: 300px) {
-    #works ul {
-        flex-direction: column;
-    }
-    #works li {
-        width: 100%;
-    }
-}
+  .work-item ul{
+    padding-left:0
+  }
+  .work-item li{
+    list-style:none
+  }
 
-
-/*----------------------------------
-footer
-----------------------------------*/
-#footer {
-    font-size: 0.5rem;
-    padding: 10px 0;
+  .work-item li p {
     text-align: center;
+	vertical-align: middle;
+  }
+.item-img {
+    width: 60%;
+    height: auto;
+    border-radius: 5px;
+
 }
 
-/*----------------------------------
-SP
-----------------------------------*/
-@media screen and (max-width: 600px) {
-    /*----------------------------------
-    Mainvisual
-    ----------------------------------*/
-    #mainxisual img {
-        height: calc(100vh - 60px);
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.8rem;
     }
 
-    /*----------------------------------
-    About
-    ----------------------------------*/
-    #about .content {
-        flex-direction: column;
-    }
-    #about img {
-        margin-right: 0;
+    header p {
+      font-size: 1rem;
     }
 
-    /*----------------------------------
-  Works
-    ----------------------------------*/
-    #works ul {
-        flex-direction: column;
+    .works {
+      flex-direction: column;
     }
-    #works li {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-}
-
+  }

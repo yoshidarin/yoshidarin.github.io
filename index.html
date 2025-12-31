@@ -1,34 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>Profile</title>
-    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="icon" content="img/favion.ico">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
-  </head>
-
-  <body>
-    <div class="loading_bg">
-      <div class="loader"></div>
-      <div class="loading_text">
-        <span>l</span>
-        <span>o</span>
-        <span>a</span>
-        <span>d</span>
-        <span>i</span>
-        <span>n</span>
-        <span>g</span>
-        <span>.</span>
-        <span>.</span>
-        <span>.</span>
-      </div>
-    </div>
-    <header id="header" class="wrapper">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ポートフォリオ | YR </title>
+  <link rel="icon" href="img/ic_rabbit.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+<header id="header" class="wrapper">
       <h1 class="site-title"><a href="index.html"><img src="img/logo.svg" alt="Profile"></a></h1>
       <nav>
         <ul>
@@ -37,69 +18,64 @@
         </ul>
       </nav>  
     </header>
-    <main>
-      <div id="mainvisual">
-        <img src="img/rabbit.jpg" alt="テキストテキストテキスト">
-      </div>
 
-      <section id="about" class="wrapper">
-        <h2 class="section-title">About</h2>
-        <div class="content">
-          <img src="img/icon.svg" alt="テキストテキストテキスト">
-          <div class="text">
-            <h3 class="content-title">R.Y</h3>
-            <h4>経歴</h4>
-            <p>
-              2020年9月 福祉法人へ入社<br>
-              2022年10月 IT業界へ転職<br>
-              2022年11月 ITヘルプデスクへ参画
-            </p>
-            <h4></h4>
-          </div>
-        </div>  
-      </section>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>こんにちは、Y.R です。</h1>
+      <p>エンジニアを目指して学習中です。シンプルな設計で、開発したプロジェクトを紹介しています。</p>
+    </div>
+  </section>
 
-      <section id="works" class="wrapper">
-        <h2 class="section-title">Works</h2>
+  <section id="about">
+    <h2>About</h2>
+    <div class="about">
+      <img src="img/icon.svg" alt="self-icon" class="profile-img">
+      <div class="profile-text">
+        <h3 class="content-title">Y.R</h3>
+        <p>社会人経験を経てエンジニアに転向中です。現在はJava、Spring Boot、SQL、フロントエンドの基本を中心に学んでいます。</p>
+        <h4>経歴</h4>
         <ul>
-          <li>
-            <div class="app-img-container">
-              <a href="omikuji.html">
-                <img src="img/ic_launcher-playstore.png" alt="開運おみくじ画像" class="app-img">
-                <div class="overlay"></div>
-              </a>
-            </div>
-            <h3 class="content-title">開運おみくじ</h3>
-            <p>おみくじを引いて運勢を占えるアプリです</p>
-          </li>
-          <li>
-            <div class="app-img-container">
-              <a href="shuuhou.html">
-                <img src="img/ic_tsukurepo.png" alt="つくレポ画像" class="app-img">
-                <div class="overlay"></div>
-              </a>
-            </div>  
-            <h3 class="content-title">つくレポ</h3>
-            <p>勤怠アプリ</p>
-          </li>
-          <li>
-            <div class="app-img-container">
-              <a href="todo.html">
-                <img src="img/todo.png" alt="SpringTodo画像" class="app-img">
-                <div class="overlay"></div>
-              </a>
-            </div>
-            <h3 class="content-title">SpringBootTodo</h3>
-            <p>Todoタスクを管理できるwebアプリ Spring Boot, DBを使用しています</p>
-          </li>
-        </ul>  
-      </section>
-    </main>
+          <li>2020年9月 福祉法人へ入社</li>
+          <li>2022年10月 IT業界へ転職</li>
+          <li>2022年11月 ITヘルプデスクへ参画</li>
+        </ul>
+        <h4>資格</h4>
+        <ul>
+          <li>Oracle Java SE Silver </li>
+          <li>Oracle Java SE Bronze</li>
+          <li>ITパスポート</li>
+          <li>実用英語技能検定 準1級</li>
+        </ul>
+      </div> 
+    </div>  
+  </section>
 
-    <footer id="footer">
-      <p>&copy; 2020 Profile</p>
-    </footer>
-
-  </body>
-   
-</html> 
+  <section id="works">
+    <h2>Works</h2>
+    <div class="works">
+      <a href="todo.html"  class="work-item">
+        <h3>Todoアプリ</h3>
+        <ul>
+            <li>Java + Spring Boot で作成したwebアプリケーション。<br>シンプルなタスク管理機能。DB実装</li>
+            <li><p><img src="img/ic_todo.png" class="item-img"></p></li>
+        </ul>
+        <div class="overlay"></div>
+      </a>
+      <a href="shuuhou.html"  class="work-item">
+        <h3>週報メーカー</h3>
+        <ul>
+          <li>JavaのSwingで作成したデスクトップアプリケーション。<br>データ入力により週報メールを完成させることができる。</li>
+          <li><p><img src="img/ic_shuuhoumaker.png" class="item-img"></p></li>
+        </ul>
+        <div class="overlay"></div>
+      </a>
+      <a href="omikuji.html"  class="work-item">
+        <h3>おみくじアプリ</h3>
+        <li>おみくじを引いて遊べるAndroidアプリケーション。<br><br><br></li>
+        <li><p><img src="img/ic_omikujiapp.png" class="item-img"></p></li><div class="overlay"></div>
+      </a>
+      <div class="overlay"></div>
+    </div>
+  </section>
+</body>
+</html>
