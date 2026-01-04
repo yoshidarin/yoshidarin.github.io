@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>StudyRecordAndroidApp</title>
+    <meta name="description" content="StudyRecordAndroidApp">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/ic_rabbit.png">
+    <link rel="stylesheet" href="css/apps.css">
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="loading_bg">
+      <div class="loader"></div>
+      <div class="loading_text">
+        <span>l</span>
+        <span>o</span>
+        <span>a</span>
+        <span>d</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+    </div>
+    </div>
+    <header id="header" class="wrapper">
+      <h1 class="site-title"><a href="index.html"><img src="img/logo.svg" alt="Profile"></a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#works">Works</a></li>
+        </ul>
+      </nav>  
+    </header>
+    <main>
+        <section class="app_title">
+            <h1>StudyRecordAndroidApp</h1>
+            <p>学習時間をカテゴリごとに記録できるAndroidアプリケーション</p>
+        </section>
+        <section class="section" style="text-align: left">
+          <h2>アプリについて</h2>
+          <p>言語：Java</p>
+          <p>開発環境：Android Studio</p>
+          <p>フレームワーク：Room</p>
+          <p>制作期間：4週間</p>
+          <a href="https://github.com/yoshidarin/StudyRecordAndroidApp" rel="Githubリンク">Githubリンク</a>
+
+        </section>
+        <section class="section" style="text-align: left">
+          <h2>メイン画面</h2>
+            <div class ="section-block">
+                <img src="img/sr_main.png" alt="勉強時間記録アプリメイン画面">
+            </div>
+            <h2>機能</h2>
+            <h3>次ごとのカテゴリ別勉強時間表示</h3>
+            <p>月毎のカテゴリ別の勉強時間を一覧表示しています</p>
+            <div class ="section-block">
+              <p>年月をタップで表示する月を変更できます</p>
+              <img src="img/sr_calendar.png" alt="月変更">
+            </div>
+            <h3>記録作成</h3>
+            <p>カテゴリごとに勉強時間の記録を登録</p>
+            <div class ="section-block">
+              <img src="img/sr_record.png" alt="記録作成">
+            </div>
+            <h3>カテゴリ編集</h3>
+             <div class ="section-block">
+              <p>ボタンからの新規カテゴリ追加や、既存のカテゴリを長押しして削除や編集ができます</p>
+            <img src="img/sr_new_category.png" alt="カテゴリ作成">
+            <img src="img/sr_category.png" alt="カテゴリ編集削除">
+            </div>
+        </section>
+
+        <section class="section" style="text-align: left">
+          <h2>制作の経緯</h2>
+          <h3>- 制作理由 -</h3>
+          <p>内部DBであるRoomを使用した実用的なAndroidアプリケーションとして、</p>
+          <p>勉強時間記録アプリ作成に挑戦しました。</p>
+          <h3>- 制作の流れ -</h3>
+          <p>メイン画面とデータ</p>
+          <p>その後タスクの完了機能を追加しました。</p>
+          <h3>- 工夫した点 -</h3>
+            <p>Androidアプリの構成の主流である1つのActivityと複数Fragmentによる画面構成を実現しました。</p>
+            <p>Githubのプルリクエストやマージなどの基本操作学習も併せて行いました。</p>
+        </section>
+
+        <section class="section" style="text-align: left">
+            <h2>感想</h2>
+            <p>Android StudioのEmulator周りのエラーに最も苦戦しましたが、最終的に解消でき、良い経験ができました。</p>
+            <p>他にも、Androidアプリならではの考慮すべき点が多く、実装しながら勉強ができました。</p>
+            <p>ライフサイクルやデータ監視のためのObserverクラスが印象に残っています。</p>
+        </section>
+
+
+    </main>
+  </body>
+</html>
