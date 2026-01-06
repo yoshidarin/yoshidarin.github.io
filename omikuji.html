@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="icon" content="img/favion.ico">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/omikuji.css">
+    <link rel="stylesheet" href="css/apps.css">
     <script src="js/script.js" defer></script>
   </head>
 
@@ -38,44 +38,49 @@
       </nav>  
     </header>
     <main>
-    <!-- アプリの説明ページ-->
-     <section class="title">
-        <h1>おみくじアプリ</h1>
-        <div class="button"><a href="https://github.com/yoshidarin/OmikujiApp">Go to Github</a></div>
-     </section>
+        <section class="app_title">
+            <h1>おみくじアプリ</h1>
+            <p>おみくじを引いて遊べるAndroidアプリケーション。</p>
+        </section>
+        <section class="section" style="text-align: left">
+          <h2>アプリについて</h2>
+          <p>言語：kotlin,Java</p>
+          <p>開発環境：Android Studio</p>
+          <p>制作期間：各5時間</p>
+        
 
-    <!-- セクション1 -->
-    <section class="section">
-        <h2>セクション1</h2>
-        <div class="content">
-            <img src="img/ic_launcher-playstore.png" alt="セクション1の画像">
-            <p>ここはセクション1の説明文です。画像と一緒に表示されます。</p>
-        </div>
-    </section>
+        </section>
+        <section class="section" style="text-align: left">
+          <h2>おみくじ画面</h2>
+            <div class ="section-block">
+                <img src="img/omikuji_main.png" alt="メイン画面">
+            </div>
+            <h2>結果画面</h2>
+            <div class ="section-block">
+              <p>結果がランダムに表示されます。</p>
+                <img src="img/omikuji_result.png" alt="結果画面">
+            </div>
+            
+        </section>
 
-    <!-- セクション2 -->
-    <section class="section">
-        <h2>セクション2</h2>
-        <div class="content">
-        <img src="img/ic_launcher-playstore.png" alt="セクション2の画像">
-        <p>ここはセクション2の説明文です。画像と一緒に表示されます。</p>
-        </div>
-    </section>
+        <section class="section" style="text-align: left">
+          <h2>制作の経緯</h2>
+          <h3>- 制作理由 -</h3>
+          <p>初めて作成した　Androidアプリです。</p>
+          <h3>- 制作の流れ -</h3>
+          <p>初めにkotlin版で全体の構成や記述内容を指導していただき、その後Javaで自分で調べながら作成しました。</p>
+          <p></p>
+          <h3>- 工夫した点 -</h3>
+            <p>乱数を用いて結果画面を分岐させています。</p>
+        </section>
 
-    <!-- セクション3 -->
-    <section class="section">
-        <h2>セクション3</h2>
-        <div class="content">
-        <img src="img/ic_launcher-playstore.png" alt="セクション3の画像">
-        <p>ここはセクション3の説明文です。画像と一緒に表示されます。</p>
-        </div>
-    </section>
+        <section class="section" style="text-align: left">
+            <h2>感想</h2>
+            <p>アプリの基本である画面の移動や結果分岐を自分で実装できたことがとても嬉しかったです。</p>
+
+        </section>
+
+
     </main>
-
-    <footer id="footer">
-      <p>&copy; 2020 Profile</p>
-    </footer>
-
   </body>
-   
-</html> 
+</html>
