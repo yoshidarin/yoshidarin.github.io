@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>task-app</title>
+    <meta name="description" content="task-app">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/ic_rabbit.png">
+    <link rel="stylesheet" href="css/apps.css">
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="loading_bg">
+      <div class="loader"></div>
+      <div class="loading_text">
+        <span>l</span>
+        <span>o</span>
+        <span>a</span>
+        <span>d</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+    </div>
+    </div>
+    <header id="header" class="wrapper">
+      <h1 class="site-title"><a href="index.html"><img src="img/logo.svg" alt="Profile"></a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#works">Works</a></li>
+        </ul>
+      </nav>  
+    </header>
+    <main>
+        <section class="app_title">
+            <h1>task-app</h1>
+            <p>Todoの確認ができるWebアプリケーション</p>
+        </section>
+        <section class="section" style="text-align: left">
+          <h2>アプリについて</h2>
+          <h4>技術スタック</h4>
+          <h5>フロントエンド</h5>
+          <p>React, TypeScript, Vite, Tailwind CSS, Storybook</p>
+          <h5>バックエンド</h5>
+          <p>Java 21, Spring Boot</p>
+          <p>PostgreSQL, Docker / Docker Compose</p>
+          <h4>制作期間</h4>
+          <p>3週間</p>
+          <h4>Githubリンク</h4>
+          <a href="https://github.com/rinybox/task-app" rel="Githubリンク">Githubリンク</a>
+
+        </section>
+        <section class="section" style="text-align: left">
+          <h2>webの画面全体</h2>
+            <p>googleのTodoリストをリスペクトしたデザイン</p>
+            <div class ="section-block">
+                <img src="img/task_view.png" alt="タスクアプリ全体">
+            </div>
+            <h2>機能</h2>
+            <h3>タスク作成</h3>
+            <p>タスクを作成できます</p>
+            <div class ="section-block">
+              <img src="img/task_create_1.png" alt="タスク作成1">
+              <img src="img/task_create_2.png" alt="タスク作成2">
+            </div>
+            <h3>タスク一覧表示</h3>
+            <p>タスクを一覧表示しています</p>
+            <div class ="section-block">
+              <p>トグルを開くことで完了タスクの表示を切り替えます</p>
+              <img src="img/task_toggle.png" alt="トグルオープン">
+            </div>
+            <h3>タスク更新</h3>
+             <div class ="section-block">
+              <p>チェックボックスをチェック/解除することでタスクのステータス変更を行うことができます</p>
+            </div>
+            <h3>タスク削除</h3>
+             <div class ="section-block">
+              <p>タスクの削除ができます</p>
+            <img src="img/task_delete.png" alt="タスク削除">
+            </div> 
+        </section>
+
+        <section class="section" style="text-align: left">
+          <h2>制作の経緯</h2>
+          <h3>- 制作理由 -</h3>
+          <p>すでに何度か利用しているSpring Bootの理解と、新しく学んだTypeScript React Dockerを組み合わせ、
+            DB バックエンド フロントエンドを網羅するアプリを作成しました。</p>
+          <p></p>
+          <h3>- 制作の流れ -</h3>
+          <p>設計：DB設計・画面設計・API設計</p>
+          <p>DB構築：PostgreSQLでコンテナ化・tasksテーブル作成</p>
+          <p>バックエンド：Spring Bootを用い、タスク管理REST APIの構築</p>
+          <p>フロントエンド：Vite + Reactのコンポーネント駆動開発</p>
+          <h3>- 工夫した点 -</h3>
+            <p>DBサーバーはDocker Composerを使用してコンテナ化しました。</p>
+            <p>フロントエンドでは、コンポーネントを独立して開発・確認できるようStorybookを導入しました</p>
+            <p>また、API通信・状態管理を useTasks カスタムフックにまとめ、コンポーネントはUIの表示に専念できる設計にしました。</p>
+            <p>セキュリティへの配慮として、DBの認証情報を環境変数で管理しソースコードに直接記載しない設計にしました。</p>
+        </section>
+
+        <section class="section" style="text-align: left">
+            <h2>感想</h2>
+            <p>開発を通じ、API設計やTypeScript React Docker SpringBootへの理解が深まりました。</p>
+            <p>JavaとTypeScript(JavaScript)との違いや共通点を実際のコードを通して発見する瞬間が特に楽しかったです。</p>
+            <p>Jゴミ箱機能(論理削除)の追加実装なども今後挑戦したいと考えています。</p>
+        </section>
+
+
+    </main>
+  </body>
+</html>
